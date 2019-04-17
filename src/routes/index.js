@@ -1,9 +1,9 @@
-var express = require("express");
+import session from "./session";
+import user from "./user";
+import message from "./message";
 
-var router = express.Router();
-
-router.get("/", (req, res) => {
-  res.send("Welcome to api!");
-});
-
-module.exports = router;
+export default {
+  session,
+  user,
+  message
+};

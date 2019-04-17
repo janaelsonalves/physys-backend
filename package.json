@@ -2,11 +2,12 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Backend to access data on MongoDB.",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "build": "babel ./src --out-dir dist",
+    "start": "node src/app.js",
+    "start-dev": "nodemon --exec babel-node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Janaelson Alves",
   "license": "MIT",
